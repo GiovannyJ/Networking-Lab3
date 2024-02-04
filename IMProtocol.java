@@ -14,7 +14,7 @@ public class IMProtocol {
             theOutput = "Connection Established";
             state = IN_CONVERSATION;
         } else if (state == IN_CONVERSATION) {
-            if (!theInput.equalsIgnoreCase("Bye")) {
+            if (!theInput.equalsIgnoreCase("Bye.")) {
                 theOutput = "";
             } else {
                 theOutput = "Bye.";

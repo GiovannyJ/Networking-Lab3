@@ -38,7 +38,7 @@ public class IMServer {
                 System.out.println("Client: " + inputLine);
                 //* Determine servers reply
                 outputLine = imp.processInput(inputLine);
-                if(!outputLine.equalsIgnoreCase("bye")){
+                if(!outputLine.equalsIgnoreCase("bye.")){
                     System.out.print("Server: ");
                     outputLine = stdIn.readLine();
                 }
