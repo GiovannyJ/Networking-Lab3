@@ -25,6 +25,12 @@ public class IMClient {
             String fromServer;
             String fromUser;
 
+            /*
+             * While the input channel is open print the messages from the server
+             * unless it says bye then the convo is done
+             * get the users input in the client side and send it to the server
+             */
+            
             //* Receive message from server
             while ((fromServer = in.readLine()) != null) {
                 //* Print Message from server

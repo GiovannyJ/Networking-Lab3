@@ -16,7 +16,7 @@ public class IMServer {
             ServerSocket serverSocket = new ServerSocket(portNumber);
             //* Accept connection request
             Socket clientSocket = serverSocket.accept();
-            
+
             PrintWriter out =
                 new PrintWriter(clientSocket.getOutputStream(), true);
             
@@ -34,6 +34,11 @@ public class IMServer {
             outputLine = imp.processInput(null);
             out.println(outputLine);
 
+            /*
+             * while the server can read an input line
+             * print out what the server said
+             * check if you are going to say bye and then send ur response
+             */
             while ((inputLine = in.readLine()) != null) {
                 System.out.println("Client: " + inputLine);
                 //* Determine servers reply
