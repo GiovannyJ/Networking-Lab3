@@ -43,8 +43,10 @@ public class IMServer {
                 System.out.println("Client: " + inputLine);
                 //* Determine servers reply
                 outputLine = imp.processInput(inputLine);
+                //*if the output is not bye. or Bye. then */
                 if(!outputLine.equalsIgnoreCase("bye.")){
                     System.out.print("Server: ");
+                    //*get an input from server side */
                     outputLine = stdIn.readLine();
                 }
                 //* Send Servers reply to client
